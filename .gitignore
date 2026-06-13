@@ -1,0 +1,27 @@
+# Redrob AI Ranker — .gitignore
+
+# Large dataset (487 MB) — not committed
+candidates.jsonl
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dev/debug scripts (not part of submission)
+audit*.py
+explore.py
+debug.py
+check_candidate.py
+inspect_submission.py
+read_pptx.py
+verify_pptx.py
+generate_pptx.py

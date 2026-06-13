@@ -1,0 +1,85 @@
+# Redrob Hackathon — Submission Metadata
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "CODE UDAAN"
+
+primary_contact:
+  name: "Palak Jaiswal"
+  email: "heyitspalakjaiswal24@gmail.com"
+  phone: "+91-9450081431"
+
+team_members:
+  - name: "Palak Jaiswal"
+    email: "heyitspalakjaiswal24@gmail.com"
+    role: "ML Engineering"
+  - name: "Rishabh Kumar"
+    email: "kumarvrishabh700@gmail.com"
+    role: "ML Engineering"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Palak24Ol/IndiaRuns_DataAndAIChallenge"
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Windows Desktop"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.10.11"
+  os: "Windows 10/11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini"
+
+ai_usage_summary: |
+  Used Gemini for architectural discussion, code review, and implementation
+  assistance. All design decisions (feature weights, keyword taxonomies,
+  scoring formulas, honeypot rules) were informed by empirical data audits
+  run against the actual candidate dataset. No candidate data was sent to
+  any external LLM during ranking. The ranking pipeline is fully deterministic
+  and uses zero ML model inference at runtime.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Three-stage retrieval-and-ranking pipeline processing 100K candidates in
+  7.5 seconds on CPU. Stage 1 filters by title + career-description gates
+  (100K → 2,755). Stage 2 flags 253 honeypots via salary/domain/career
+  inconsistency rules. Stage 3 extracts 42 features across 9 groups:
+  career description keyword density (retrieval, production, ML, leadership),
+  skill depth (proficiency × duration × endorsements), title relevance,
+  experience fit, company quality tiers, location/logistics, education,
+  behavioral signals, and assessment scores. Stage 4 applies coarse scoring
+  with a multiplicative behavioral modifier (0.50x–1.15x) to select Top 200.
+  Stage 5 precision-reranks with description-heavy weights (retrieval 25%,
+  production 15%) to select Top 100. Stage 6 calibrates Top 10 using
+  ultra-specific retrieval keywords and availability signals. Every reasoning
+  string is deterministic, zero-hallucination, extracted directly from
+  candidate JSON fields. No ML frameworks or external APIs at runtime.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
