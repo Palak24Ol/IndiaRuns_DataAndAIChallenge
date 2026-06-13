@@ -13,10 +13,10 @@ primary_contact:
 team_members:
   - name: "Palak Jaiswal"
     email: "heyitspalakjaiswal24@gmail.com"
-    role: "ML Engineering"
+    role: "ML Engineer"
   - name: "Rishabh Kumar"
     email: "kumarvrishabh700@gmail.com"
-    role: "ML Engineering"
+    role: "Data Engineer"
 
 # ============================================================================
 # Code and reproducibility
