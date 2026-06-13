@@ -23,7 +23,7 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/Palak24Ol/IndiaRuns_DataAndAIChallenge"
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+sandbox_link: "https://codeudaan-redrob.streamlit.app/"
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
@@ -46,14 +46,17 @@ compute:
 # ============================================================================
 ai_tools_used:
   - "Gemini"
+  - "Claude"
 
 ai_usage_summary: |
-  Used Gemini for architectural discussion, code review, and implementation
-  assistance. All design decisions (feature weights, keyword taxonomies,
-  scoring formulas, honeypot rules) were informed by empirical data audits
-  run against the actual candidate dataset. No candidate data was sent to
-  any external LLM during ranking. The ranking pipeline is fully deterministic
-  and uses zero ML model inference at runtime.
+  Used Gemini and Claude for architectural discussion and code review.
+  All design decisions — feature weights, keyword taxonomies, scoring
+  formulas, honeypot detection rules — were made by the team based on
+  hands-on audits of the actual candidate dataset. Pipeline architecture,
+  feature engineering, and scoring logic were built and iterated by us;
+  AI tools were used as a sounding board, not as the author. No candidate
+  data was sent to any external LLM during ranking. The ranking pipeline
+  is fully deterministic and uses zero ML model inference at runtime.
 
 # ============================================================================
 # Approach summary
