@@ -1,5 +1,5 @@
 # Redrob AI Ranker — The Data and AI Challenge
-# Team: Code Udaan | Palak Jaiswal & Rishabh Kumar
+# Team: CodeUdaan | Palak Jaiswal & Rishabh Kumar
 
 > **Redrob Data & AI Challenge** — Rank the Top 100 candidates for a Senior AI Engineer role from a pool of 100,000 profiles.
 
@@ -94,7 +94,7 @@ redrob-ai-ranker/
 ├── candidate_schema.json        # Schema reference
 ├── sample_submission.csv        # Official format reference
 ├── sample_candidates.json       # Small sample for sandbox testing
-├── CodeUdaan_Redrob_Submission_byPalak.pptx  # Final presentation deck
+├── CodeUdaan_PPT.pptx  # Final presentation deck
 └── README.md                    # This file
 ```
 
@@ -274,4 +274,4 @@ Both scripts use **zero external dependencies** — only Python standard library
 
 ## License
 
-This project was created for the Redrob Data & AI Challenge by **Team Code Udaan**.
+This project was created for the Redrob Data & AI Challenge by **Team CodeUdaan**.
